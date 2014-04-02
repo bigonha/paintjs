@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Load the Paper.js library -->
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="paper.js"></script>
+<!-- Load external PaperScript and associate it with myCanvas -->
+<script type="text/javascript" src="cgpi.library.js">
+</script>
+<script type="text/javascript" src="custom.js">
+</script>
+<style>
+	html,body{width:100%; height:100%; margin:0; padding:0;}
+	#myCanvas{width:1000px; height:500px; }
+	#myCanvas, #mapeamentoCanvas, #clippingCanvas {border-right:1px solid red; border-bottom:1px solid red; float:left;}
+	#mapeamentoCanvas, #clippingCanvas{width:200px; height:100px; }
+	#controlsWrapper {height:10%; float:left;}
+	#form{float:left; clear:both;}
+	#clippingCanvas img {width:200px; height:100px;}
+	#get_canvas{visibility:hidden;}
+</style>
+</head>
+<body>
+		
+	<canvas id="myCanvas"></canvas>
+	<canvas id="mapeamentoCanvas"></canvas>
+	<div id="clippingCanvas"></div>
+	<div id="controlsWrapper">Ferramenta:
+		<select id="controls">
+			<option>reta</option>
+			<option>circulo</option>	
+			<option>retangulo</option>		
+			<option>poligono</option>	
+			<option>linha_poligonal</option>
+			<option>borracha</option>
+			<option>clipping</option>			
+		</select>
+	</div>
+	
+	<form action="export_xml.php" method="post" id="export_xml">
+		<button>Exportar XML</button>
+	</form>
+	
+	<a href="receive_canvas.php" id="get_canvas">Update Clipping</a>
+	
+	<form action="import_xml.php" method="post" id="import_xml">
+		<button>Importar XML</button>
+	</form>
+	
+		
+</body>
+</html>
