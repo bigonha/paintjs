@@ -1,0 +1,15 @@
+<Figura> <Reta>
+						<Ponto>
+							<x>0.445</x>
+							<y>0.804</y>
+						</Ponto>
+						<Ponto>
+							<x>0.615</x>
+							<y>0.462</y>
+						</Ponto>
+						<Cor>
+							<R>0</R>
+							<G>0</G>
+							<B>0</B>														
+						</Cor>
+					</Reta></Figura>

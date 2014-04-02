@@ -101,10 +101,11 @@ foreach($_POST['figura'] as $f){
 
 $data = '<Figura>'.$data.'</Figura>';
 
-$file = fopen($_SERVER['DOCUMENT_ROOT'].'/cgpi/renato_afonso_thiago.xml', 'w');
+$file = fopen('/srv/www/paint.bigonha.com/public/figura.xml', 'w');
+
 fwrite($file, $data);
 fclose($file);
 
-echo 'file:///Users/Renato/Dropbox/server/cgpi/renato_afonso_thiago.xml';
+echo '<a target="_blank" href="http://paint.bigonha.com/figura.xml">Baixar arquivo exportado</a>';
 
 ?>
